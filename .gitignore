@@ -1,2 +1,7 @@
 node_modules/
 dist/
+.env
+src/generatedResilienceTest.ts
+src/liveGeneratedResilienceTest.ts
+src/livePatchedResilienceTest.ts
+src/livePatchedService.ts

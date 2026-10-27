@@ -1,5 +1,5 @@
 {
-  "name": "incident-resilience-test",
+  "name": "outage-dna",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,8 +9,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
     "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@tavily/core": "^0.7.14",
+    "openai": "^7.45.0"
   }
 }
