@@ -53,7 +53,7 @@ export default function IncidentsPage() {
 
           <div className="border-t border-[#E5E7EB] px-4 py-5">
             <p className="mb-3 px-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#98A2B3]">
-              Connected
+              Demo target
             </p>
 
             <div className="flex items-center gap-3 px-2">
@@ -62,10 +62,12 @@ export default function IncidentsPage() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-[#344054]">GitHub</p>
+                <p className="text-sm font-medium text-[#344054]">
+  retryStormVulnerable.ts
+</p>
                 <div className="mt-0.5 flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#12B76A]" />
-                  <span className="text-xs text-[#98A2B3]">Connected</span>
+                  <span className="text-xs text-[#98A2B3]">Demo codebase</span>
                 </div>
               </div>
             </div>

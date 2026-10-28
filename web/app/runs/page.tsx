@@ -4,7 +4,6 @@ import {
   CheckCircle2,
   GitBranch,
   History,
-  MoreHorizontal,
   Search,
 } from "lucide-react";
 
@@ -51,8 +50,8 @@ export default function RunsPage() {
 
           <div className="border-t border-[#E5E7EB] px-4 py-5">
             <p className="mb-3 px-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#98A2B3]">
-              Connected
-            </p>
+  Demo target
+</p>
 
             <div className="flex items-center gap-3 px-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-md border border-[#E5E7EB] bg-white">
@@ -60,11 +59,13 @@ export default function RunsPage() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-[#344054]">GitHub</p>
+                <p className="text-sm font-medium text-[#344054]">
+  retryStormVulnerable.ts
+</p>
 
                 <div className="mt-0.5 flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#12B76A]" />
-                  <span className="text-xs text-[#98A2B3]">Connected</span>
+                  <span className="text-xs text-[#98A2B3]">Demo codebase</span>
                 </div>
               </div>
             </div>
@@ -82,7 +83,7 @@ export default function RunsPage() {
                 </h1>
 
                 <p className="mt-2 text-[14px] leading-6 text-[#667085]">
-                  History of resilience analyses performed on your codebase.
+                  Verified results from the OutageDNA demo workflow.
                 </p>
               </div>
 
@@ -143,7 +144,7 @@ export default function RunsPage() {
             <section className="mt-10">
               <div className="mb-4">
                 <h2 className="text-[16px] font-semibold">
-                  Run history
+                  Verified demo run
                 </h2>
               </div>
 
@@ -199,7 +200,7 @@ export default function RunsPage() {
                     </p>
 
                     <p className="mt-0.5 text-xs text-[#98A2B3]">
-                      14:32
+                      Demo run
                     </p>
                   </div>
 
@@ -229,9 +230,7 @@ export default function RunsPage() {
                     View
                   </a>
 
-                  <button className="text-[#98A2B3]">
-                    <MoreHorizontal size={17} />
-                  </button>
+
                 </div>
               </div>
             </section>

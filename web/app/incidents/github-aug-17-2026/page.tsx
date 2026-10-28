@@ -96,7 +96,7 @@ export default function IncidentInvestigationPage() {
 
           <div className="border-t border-[#E5E7EB] px-4 py-5">
             <p className="mb-3 px-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#98A2B3]">
-              Connected
+              Demo target
             </p>
 
             <div className="flex items-center gap-3 px-2">
@@ -105,10 +105,12 @@ export default function IncidentInvestigationPage() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-[#344054]">GitHub</p>
+                <p className="text-sm font-medium text-[#344054]">
+  retryStormVulnerable.ts
+</p>
                 <div className="mt-0.5 flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#12B76A]" />
-                  <span className="text-xs text-[#98A2B3]">Connected</span>
+                  <span className="text-xs text-[#98A2B3]">Demo codebase</span>
                 </div>
               </div>
             </div>
@@ -211,7 +213,7 @@ export default function IncidentInvestigationPage() {
                     <div className="flex items-center gap-2">
                       <div
                         className={`flex h-6 w-6 items-center justify-center rounded-full text-[11px] font-semibold ${
-                          index <= 2
+                          agentResult || index === 0
                             ? "bg-[#3157D5] text-white"
                             : "bg-[#F2F4F7] text-[#667085]"
                         }`}
@@ -221,7 +223,7 @@ export default function IncidentInvestigationPage() {
 
                       <span
                         className={`text-xs font-medium ${
-                          index === 2
+                          agentResult || index === 0
                             ? "text-[#3157D5]"
                             : "text-[#667085]"
                         }`}
@@ -250,12 +252,12 @@ export default function IncidentInvestigationPage() {
                     <div
                       key={step}
                       className={`flex gap-3 rounded-md px-3 py-3 ${
-                        index === 2 ? "bg-[#EEF2FF]" : ""
+                        agentResult || index === 0 ? "bg-[#EEF2FF]" : ""
                       }`}
                     >
                       <div
                         className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[11px] font-semibold ${
-                          index === 2
+                          agentResult || index === 0
                             ? "bg-[#3157D5] text-white"
                             : "bg-[#F2F4F7] text-[#667085]"
                         }`}
@@ -266,7 +268,7 @@ export default function IncidentInvestigationPage() {
                       <div>
                         <p
                           className={`text-sm font-medium ${
-                            index === 2
+                            agentResult || index === 0
                               ? "text-[#3157D5]"
                               : "text-[#344054]"
                           }`}
@@ -474,8 +476,8 @@ export default function IncidentInvestigationPage() {
 )}
 
                   <p className="mt-2 text-sm text-[#667085]">
-                    Incident-specific test generated from the GitHub failure
-                    pattern.
+                    Incident-specific test derived from the GitHub failure
+pattern.
                   </p>
 
                   <div

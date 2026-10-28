@@ -52,7 +52,7 @@ export default function Home() {
 
           <div className="border-t border-[#E5E7EB] px-4 py-5">
             <p className="mb-3 px-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-[#98A2B3]">
-              Connected
+              Demo target
             </p>
 
             <div className="flex items-center gap-3 px-2">
@@ -61,10 +61,12 @@ export default function Home() {
               </div>
 
               <div>
-                <p className="text-sm font-medium text-[#344054]">GitHub</p>
+                <p className="text-sm font-medium text-[#344054]">
+  retryStormVulnerable.ts
+</p>
                 <div className="mt-0.5 flex items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#12B76A]" />
-                  <span className="text-xs text-[#98A2B3]">Connected</span>
+                  <span className="text-xs text-[#98A2B3]">Demo codebase</span>
                 </div>
               </div>
             </div>
@@ -86,10 +88,13 @@ export default function Home() {
                 </p>
               </div>
 
-              <button className="flex h-10 items-center gap-2 rounded-md bg-[#3157D5] px-4 text-sm font-medium text-white transition hover:bg-[#2949B8]">
-                Analyze my codebase
-                <ArrowRight size={15} strokeWidth={2} />
-              </button>
+              <a
+  href="/incidents/github-aug-17-2026"
+  className="flex h-10 items-center gap-2 rounded-md bg-[#3157D5] px-4 text-sm font-medium text-white transition hover:bg-[#2949B8]"
+>
+  Open live investigation
+  <ArrowRight size={15} strokeWidth={2} />
+</a>
             </div>
 
             {/* Latest incident */}
@@ -99,9 +104,12 @@ export default function Home() {
                   Latest incident
                 </h2>
 
-                <button className="text-sm font-medium text-[#3157D5]">
-                  View all incidents
-                </button>
+                <a
+  href="/incidents"
+  className="text-sm font-medium text-[#3157D5]"
+>
+  View all incidents
+</a>
               </div>
 
               <div className="border-y border-[#E5E7EB] bg-white">
@@ -151,9 +159,12 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <button className="shrink-0 rounded-md border border-[#D0D5DD] bg-white px-3.5 py-2 text-sm font-medium text-[#344054] transition hover:bg-[#F9FAFB]">
-                    Investigate
-                  </button>
+                  <a
+  href="/incidents/github-aug-17-2026"
+  className="shrink-0 rounded-md border border-[#D0D5DD] bg-white px-3.5 py-2 text-sm font-medium text-[#344054] transition hover:bg-[#F9FAFB]"
+>
+  Investigate
+</a>
                 </div>
               </div>
             </section>
@@ -232,9 +243,12 @@ export default function Home() {
                   Recent run
                 </h2>
 
-                <button className="text-sm font-medium text-[#3157D5]">
-                  View run history
-                </button>
+                <a
+  href="/runs"
+  className="text-sm font-medium text-[#3157D5]"
+>
+  View verified run
+</a>
               </div>
 
               <div className="overflow-hidden border-y border-[#E5E7EB] bg-white">
