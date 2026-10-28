@@ -295,7 +295,7 @@ export default function IncidentInvestigationPage() {
                       </p>
 
                       <h2 className="mt-2 text-[19px] font-semibold">
-                        Retry storm
+                        {agentResult ? agentResult.analysis.failureDna.name : "—"}
                       </h2>
                     </div>
 
@@ -313,7 +313,7 @@ export default function IncidentInvestigationPage() {
                         Trigger
                       </p>
                       <p className="mt-1 text-sm leading-6 text-[#344054]">
-                        Upstream degradation causes requests to fail.
+                        {agentResult ? agentResult.analysis.failureDna.trigger : "—"}
                       </p>
                     </div>
 
@@ -322,8 +322,7 @@ export default function IncidentInvestigationPage() {
                         Mechanism
                       </p>
                       <p className="mt-1 text-sm leading-6 text-[#344054]">
-                        Immediate client retries multiply traffic against an
-                        already degraded dependency.
+                        {agentResult ? agentResult.analysis.failureDna.mechanism : "—"}
                       </p>
                     </div>
 
@@ -332,8 +331,9 @@ export default function IncidentInvestigationPage() {
                         Signals
                       </p>
                       <p className="mt-1 text-sm leading-6 text-[#344054]">
-                        No retry budget · no backoff · no jitter · no circuit
-                        breaker
+                        {agentResult
+  ? agentResult.analysis.failureDna.signals.join(" · ")
+  : "—"}
                       </p>
                     </div>
 
@@ -342,8 +342,9 @@ export default function IncidentInvestigationPage() {
                         Recommended test
                       </p>
                       <p className="mt-1 text-sm leading-6 text-[#344054]">
-                        Force upstream failures and measure request
-                        amplification under retries.
+                        {agentResult
+  ? agentResult.analysis.failureDna.recommendedTest
+  : "—"}
                       </p>
                     </div>
                   </div>
@@ -358,21 +359,23 @@ export default function IncidentInvestigationPage() {
                       </p>
 
                       <h2 className="mt-2 text-[19px] font-semibold">
-                        Similar retry behavior found in your codebase
+                        {agentResult
+  ? `${agentResult.exposure.failurePattern} found in your codebase`
+  : "—"}
                       </h2>
                     </div>
 
                     <div className="text-right">
                       <p className="text-xs text-[#98A2B3]">Match confidence</p>
                       <p className="mt-1 text-2xl font-semibold tracking-[-0.03em]">
-                        95%
+                        {agentResult ? `${agentResult.exposure.confidence}%` : "—"}
                       </p>
                     </div>
                   </div>
 
                   <div className="mt-5 overflow-hidden border border-[#E5E7EB] bg-[#FBFCFE]">
                     <div className="border-b border-[#E5E7EB] bg-white px-4 py-2.5 font-mono text-xs text-[#667085]">
-                      src/retryStormVulnerable.ts
+                      {agentResult ? agentResult.exposure.file : "—"}
                     </div>
 
                     <div className="px-4 py-4 font-mono text-[13px] leading-6">
@@ -400,7 +403,7 @@ export default function IncidentInvestigationPage() {
                           12
                         </span>
                         <span className="pl-8">
-                          callUpstream(attempt + 1);
+                          {agentResult ? agentResult.exposure.evidence[0]?.line : "—"}
                         </span>
                       </div>
 
@@ -425,9 +428,7 @@ export default function IncidentInvestigationPage() {
                       Why this matters
                     </p>
                     <p className="mt-1 text-sm leading-6 text-[#667085]">
-                      Every failed request can immediately trigger another
-                      attempt without a global retry budget, reproducing the same
-                      amplification mechanism seen in GitHub&apos;s outage.
+                      {agentResult ? agentResult.exposure.explanation : "—"}
                     </p>
                   </div>
                 </section>
@@ -542,7 +543,7 @@ export default function IncidentInvestigationPage() {
                       </p>
 
                       <h2 className="mt-2 text-[19px] font-semibold">
-                        Add a global retry budget
+                        {agentResult ? agentResult.mitigation.title : "—"}
                       </h2>
                     </div>
 
@@ -552,8 +553,7 @@ export default function IncidentInvestigationPage() {
                   </div>
 
                   <p className="mt-2 max-w-2xl text-sm leading-6 text-[#667085]">
-                    Limit retries across all requests so degraded dependencies
-                    cannot be overwhelmed by uncontrolled retry amplification.
+                    {agentResult ? agentResult.mitigation.strategy : "—"}
                   </p>
 
                   <div className="mt-5 overflow-hidden border border-[#E5E7EB] bg-[#FBFCFE]">
