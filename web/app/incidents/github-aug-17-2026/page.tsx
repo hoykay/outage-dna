@@ -558,7 +558,7 @@ export default function IncidentInvestigationPage() {
 
                   <div className="mt-5 overflow-hidden border border-[#E5E7EB] bg-[#FBFCFE]">
                     <div className="border-b border-[#E5E7EB] bg-white px-4 py-2.5 font-mono text-xs text-[#667085]">
-                      src/livePatchedService.ts
+                      demo/retryStormPatched.ts
                     </div>
 
                     <div className="px-4 py-4 font-mono text-[13px] leading-6">
