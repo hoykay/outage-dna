@@ -172,7 +172,7 @@ export default function Home() {
             {/* Current state */}
             <section className="mt-10">
               <h2 className="text-[16px] font-semibold text-[#111318]">
-                Current state
+                Verified demo result
               </h2>
 
               <div className="mt-4 grid grid-cols-3 border-y border-[#E5E7EB] bg-white">
