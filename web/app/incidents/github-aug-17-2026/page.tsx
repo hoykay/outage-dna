@@ -454,14 +454,7 @@ export default function IncidentInvestigationPage() {
                       </h2>
                     </div>
 
-                    <button
-  onClick={runAgent}
-  disabled={isRunning}
-  className="flex h-9 items-center gap-2 rounded-md bg-[#111318] px-4 text-sm font-medium text-white transition disabled:cursor-not-allowed disabled:opacity-60"
->
-  <Play size={14} fill="currentColor" />
-  {isRunning ? "Running OutageDNA..." : "Run resilience test"}
-</button>
+                    
                   </div>
 
                   {agentResult && (
